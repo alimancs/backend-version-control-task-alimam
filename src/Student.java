@@ -35,4 +35,18 @@ public class Student {
                             studentId, firstName, lastName, gpa);
     }
 
+        public String getFullName() {
+        return firstName + " " + lastName;
+    }
+    
+    public boolean isHonorsStudent() {
+        return gpa >= 3.5;
+    }
+    
+    public String getStudentInfo() {
+        return String.format("ID: %s | Name: %s | GPA: %.2f | Status: %s",
+                            studentId, getFullName(), gpa, 
+                            isHonorsStudent() ? "Honors" : "Regular");
+    }
+
 }
