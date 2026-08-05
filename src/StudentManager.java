@@ -61,4 +61,38 @@ public class StudentManager {
         }
         return results;
     }
+
+    public void displayAllStudents() {
+        if (students.isEmpty()) {
+            System.out.println("No students in the system.");
+            return;
+        }
+        System.out.println("=== STUDENTS LIST ===");
+        for (Student s : students) {
+            System.out.println(s.getStudentInfo());
+        }
+        System.out.println("Total: " + getStudentCount() + " students");
+    }
+    
+    // Get average GPA
+    public double getAverageGpa() {
+        if (students.isEmpty()) return 0.0;
+        double sum = 0;
+        for (Student s : students) {
+            sum += s.getGpa();
+        }
+        return sum / students.size();
+    }
+    
+    // Get honors students
+    public List<Student> getHonorsStudents() {
+        List<Student> honors = new ArrayList<>();
+        for (Student s : students) {
+            if (s.isHonorsStudent()) {
+                honors.add(s);
+            }
+        }
+        return honors;
+    }
+}
 }
