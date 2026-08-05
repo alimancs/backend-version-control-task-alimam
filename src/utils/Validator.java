@@ -46,4 +46,11 @@ public class Validator {
         System.out.println("Valid: " + validateStudent(student));
     }
 
+    public static void printValidationResult(Student student) {
+        String result = validateWithMessage(student);
+        System.out.println("Validation result: " + result);
+        System.out.println("Valid: " + validateStudent(student));
+    }
+
+
 }
