@@ -9,11 +9,6 @@ public class StudentManager {
     public StudentManager() {
         this.students = new ArrayList<>();
     }
-
-    // BUG: intentional bug
-    public List<Student> getStudentsAsList() {
-        return students;  // BUG: Exposing internal list
-    }
     
     // Add a student with validation
     public boolean addStudent(Student student) {
