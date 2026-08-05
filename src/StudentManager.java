@@ -28,4 +28,37 @@ public class StudentManager {
         }
         return null;
     }
+
+        // Remove student
+    public boolean removeStudent(String studentId) {
+        Student student = findStudentById(studentId);
+        if (student != null) {
+            students.remove(student);
+            return true;
+        }
+        return false;
+    }
+    
+    // Get all students
+    public List<Student> getAllStudents() {
+        return new ArrayList<>(students);
+    }
+    
+    // Get student count
+    public int getStudentCount() {
+        return students.size();
+    }
+    
+    // Search by name (contains)
+    public List<Student> searchByName(String name) {
+        List<Student> results = new ArrayList<>();
+        String searchLower = name.toLowerCase();
+        for (Student s : students) {
+            if (s.getFirstName().toLowerCase().contains(searchLower) ||
+                s.getLastName().toLowerCase().contains(searchLower)) {
+                results.add(s);
+            }
+        }
+        return results;
+    }
 }
