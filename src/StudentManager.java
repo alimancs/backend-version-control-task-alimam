@@ -12,7 +12,7 @@ public class StudentManager {
 
     // BUG: intentional bug
     public List<Student> getStudentsAsList() {
-        return students;  // BUG: Exposing internal list.
+        return students;  // BUG: Exposing internal list
     }
     
     // Add a student with validation
