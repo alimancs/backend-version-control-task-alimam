@@ -36,3 +36,7 @@ git init                          # Initialize repository
 git clone <url>                   # Clone repository
 git status                        # Check status
 git log --oneline                 # View commit history
+git commit
+git checkout <branch-name>
+git push origin <branch-name>
+git add <file-path>
