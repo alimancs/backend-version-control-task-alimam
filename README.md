@@ -28,6 +28,10 @@ A simple Java-based backend project demonstrating student management.
 | `feature-validation` | Input validation utilities |
 | `feature-error-demo-fixed` | Demonstration of error handling |
 
+## Screenshot of merged PRs
+<img width="1352" height="642" alt="Screenshot from 2026-08-06 12-33-34" src="https://github.com/user-attachments/assets/e8566546-2f06-40f0-9d6e-8403913439c8" />
+
+
 ## Git Commands Used
 
 ### Repository Management
