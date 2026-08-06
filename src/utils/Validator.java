@@ -1,5 +1,7 @@
 package src.utils;
 
+import src.Student;
+
 public class Validator {
     
     public static boolean isValidEmail(String email) {
@@ -15,7 +17,7 @@ public class Validator {
     };
     
     public static boolean isValidStudentId(String id) {
-        return id != null && id.matches("STU\\d{4}");
+        return id != null && id.matches("STU\\d{3,4}");
     };
 
         // Validate entire student object
@@ -32,7 +34,7 @@ public class Validator {
     public static String validateWithMessage(Student student) {
         if (student == null) return "Student is null";
         if (!isValidStudentId(student.getStudentId())) 
-            return "Invalid student ID (must be STU####)";
+            return "Invalid student ID (must be STU### or STU####)";
         if (!isValidEmail(student.getEmail())) 
             return "Invalid email format";
         if (!isValidAge(student.getAge())) 
